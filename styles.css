@@ -1,0 +1,536 @@
+/* General styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure the body takes full height */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: black;
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+}
+
+body {
+    flex-grow: 1; /* Allow the body to expand and fill the available space */
+}
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #90EE90;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Change text color to white */
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #808080; /* Grey on hover */
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Banner Section */
+.banner {
+    background-color: #90EE90;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('your-banner-image.jpg'); /* Replace with your banner image */
+    background-size: cover;
+    color: white; /* Change "Welcome" text color to white */
+    background-position: center;
+}
+
+.banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* New Description Section with Light Green Semi-Transparent Background */
+.description-section {
+    background-color: rgba(144, 238, 144, 0.7); /* Light green with transparency */
+    padding: 50px 20px;
+    margin-bottom: 0; /* Remove any bottom margin to avoid gap */
+}
+
+.description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description-container h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.description-container p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Discord Section */
+.discord-section {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+}
+
+.discord-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid #7289DA; /* Blurple border */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discord-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.discord-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.discord-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.discord-description {
+    color: #808080;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.discord-button {
+    background-color: #7289DA; /* Blurple color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.discord-button:hover {
+    background-color: #5b6e9b; /* Darker blurple on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0; /* Remove margin to avoid gap */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .description-container h2 {
+        font-size: 30px;
+    }
+
+    .main-content {
+        padding: 30px 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        max-height: 40px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust Discord Section on mobile */
+    .discord-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .discord-text {
+        font-size: 20px;
+    }
+
+    .discord-description {
+        font-size: 14px;
+    }
+
+    .discord-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+/* Partners Page Styling */
+.partners-page {
+    padding: 50px 20px;
+    flex-grow: 1;
+}
+
+.partners-content {
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid #7289DA; /* Blurple border */
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.partners-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the title */
+    margin-bottom: 20px;
+}
+
+.partners-content p {
+    font-size: 20px;
+    color: #808080;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Footer Styling (if you need to adjust footer as well) */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+/* General styles (from previous pages) */
+
+/* Games Page Styling */
+.games-page {
+    padding: 50px 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.games-page h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the title */
+    margin-bottom: 40px;
+}
+
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.game-box {
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid #7289DA; /* Blurple border */
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for game title */
+    margin-bottom: 15px;
+}
+
+.game-box p {
+    font-size: 18px;
+    color: #808080; /* Grey description text */
+    line-height: 1.5;
+}
+
+.game-box:hover {
+    transform: translateY(-10px); /* Hover effect - raise the box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Footer Styling (same as previous pages) */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+/* General styles (same as previous pages) */
+
+/* Mods Page Styling */
+.mods-page {
+    padding: 50px 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.mods-page h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the title */
+    margin-bottom: 40px;
+}
+
+.mods-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.mod-box {
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid #7289DA; /* Blurple border */
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mod-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for mod title */
+    margin-bottom: 15px;
+}
+
+.mod-box p {
+    font-size: 18px;
+    color: #808080; /* Grey description text */
+    line-height: 1.5;
+}
+
+.mod-box:hover {
+    transform: translateY(-10px); /* Hover effect - lift up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Footer Styling (same as previous pages) */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+/* General styles (same as previous pages) */
+
+/* Wall of Fame Styling */
+.wall-of-fame {
+    padding: 50px 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.wall-of-fame h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the title */
+    margin-bottom: 20px;
+}
+
+.wall-of-fame-description {
+    font-size: 18px;
+    color: #808080; /* Grey description text */
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wall-of-fame-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.wall-of-fame-box {
+    background-color: white;
+    border-radius: 15px;
+    border: 3px solid #7289DA; /* Blurple border */
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wall-of-fame-box img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.wall-of-fame-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the username */
+    margin-bottom: 10px;
+}
+
+.wall-of-fame-box p {
+    font-size: 18px;
+    color: #808080; /* Grey text for the award description */
+    line-height: 1.5;
+}
+
+.wall-of-fame-box:hover {
+    transform: translateY(-10px); /* Hover effect - lift the box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Footer Styling (same as previous pages) */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+
+
+
+/* General styles (same as previous pages) */
+
+/* Contact Us Page Styling */
+.contact-us {
+    padding: 50px 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #90EE90; /* Light green for the title */
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 18px;
+    color: #808080; /* Grey description text */
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-description strong {
+    color: #90EE90; /* Light green for the email */
+}
+
+/* Footer Styling (same as previous pages) */
+.footer {
+    background-color: #90EE90;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+
+
